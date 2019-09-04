@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Caramel Apple Cake!</h1>
+//insert picture
+<p>This cake I made for my friend's grandmother. It was completely homemade and took a total of 9 hours. 
+The cake mix is caramel flavored that I achieved with a specific extract. The icing is also caramel flavored, plain and simple. Then the 
+topping is pure homemade caramel I made in a sauce pan with sea salt flakes sprinkled on top. Besides that on top is plenty of caramel
+focused candies and foods to just add dimension, layers, and decoration.</p>
+
+<h3>Some Notable Ingredients</h3>
+<o1 type="1">
+    <li>A few green apples</li>
+    <li>Homemade caramel</li>
+    <li>Caramel candies for decorating</li>
+    </ol>
+
+</body>
+</html>
