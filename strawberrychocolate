@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Strawberry Chocolate Cake!</h1>
+//insert picture
+<p>This cake I made for a friend's sister's birthday :) It was quite a challenge. There are dozens of real strawberries I implemented 
+into the buttercream icing mixture, which gave it such a unique and interesting texture, and also in the cake layers itself! The cake 
+layers were a light pink and were strawberry flavored with real strawberries, extract, and syrup from the fruit. The icing between the 
+layers was a chocolate buttercream and to match that I added chocolate covered strawberries on top with that chocolate
+ganache. Whenever I show someone one of my cakes, this seems to be the one to get the best reaction. Thanks for looking!</p>
+
+<h3>Some Notable Ingredients</h3>
+<o1 type="1">
+    <li>2 Dozen Strawberries</li>
+    <li>Semisweet Chocolate (about 8 ounces)</li>
+    <li>Strawberry Extract</li>
+    </ol>
+
+</body>
+</html>
