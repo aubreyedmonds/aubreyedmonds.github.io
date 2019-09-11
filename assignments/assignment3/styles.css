@@ -1,0 +1,63 @@
+/* CSS Stylesheet */
+
+/* h1 Headings */
+
+h1{
+color: rgb(1128,0,128)
+}
+h1 {
+  text-shadow: 3px 2px red;
+}
+
+/* Paragraph */
+
+p{
+  color: rgb(128,0,128);
+}
+
+/* Background */
+
+body {
+  background-image: url("milky_white.jpeg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: pink;
+}
+
+.imgframe
+    { background:#D652D9;
+    padding:12px;
+    border:1px solid #999; }
+
+/* Links */
+/* unvisited link */
+a:link {
+  color: Orange;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(128,128,0);
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/* Table */
+
+table, th, td {
+  border: 1px solid black;
+  background-color: aqua;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}

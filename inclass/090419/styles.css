@@ -1,0 +1,17 @@
+body{
+  background:skyblue;
+  color:red;
+  font-family:serif, Helvetica;
+}
+
+h1 {
+  color:green;
+}
+
+h2{
+  color:pink;
+}
+
+p{
+  color:yellow;
+}
