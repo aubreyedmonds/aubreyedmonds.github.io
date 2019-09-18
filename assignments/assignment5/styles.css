@@ -1,0 +1,29 @@
+html,body{
+    background:black;
+    font-family: sans-serif;
+    height:100%;
+    width:100%;
+    padding:0px;
+    margin:0px;
+}
+
+h1{
+    text-align: center;
+}
+
+
+.box{
+    background: lightgray;
+    display:flex;
+    height: 100%;
+    width:100;
+    align-items:center;
+    justify-content: center;
+}
+
+.container{
+    background: lightpink;
+    height: 50%;
+    width: 50%;
+    padding:30px;
+}
