@@ -1,0 +1,27 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background: black;
+}
+
+.box{
+    width: 400px;
+    margin: 5px;
+    justify-content: center;
+    text-align: left;
+    border-radius: 10px;
+    background:blue;
+    padding: 10px
+}

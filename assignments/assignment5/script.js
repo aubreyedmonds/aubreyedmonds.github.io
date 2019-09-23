@@ -1,3 +1,4 @@
+"using strict"
 const name = prompt("Please enter your name, friend");
 const coffees = prompt("How many coffees would you like?");
 const tip = prompt("Tip?? Please?? :)");
