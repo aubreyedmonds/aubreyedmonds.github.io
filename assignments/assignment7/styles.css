@@ -1,0 +1,30 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #333333;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center; /*vertical alignment* <-- NOT WORKING?? */
+    height: 600px; /*using instead of vertical alignment*/
+}
+
+.box1 ,.box2 ,.box3{
+    background: #3399FF;
+    padding: 20px; /*rounds out the corners */
+    border-radius: 10px;  /*rounds out the corners */
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
