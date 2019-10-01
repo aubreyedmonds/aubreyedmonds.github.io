@@ -1,8 +1,11 @@
-body{
-    background: white;
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
-.searchbar{
-    background-color: black;
-    background-size: 100
+.Top-portion-with-search{
+    background: #705545;
+    color: #FFFFFF;
+    padding: 30px;
 }
