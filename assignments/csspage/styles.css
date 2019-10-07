@@ -5,7 +5,19 @@
 }
 
 .Top-portion-with-search{
-    background: #705545;
-    color: #FFFFFF;
+    /* background: #705545;
+    color: #FFFFFF; */
     padding: 30px;
+}
+
+#footer-header{
+    display: flex;
+}
+
+#footer-info{
+    display: flex;
+}
+
+.footer-lists{
+    display: flex;
 }
