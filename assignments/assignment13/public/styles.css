@@ -1,0 +1,38 @@
+body{
+    background: lightgreen;
+}
+
+.cake{
+    background: pink;
+    width: 60%;
+    margin: auto;
+    border: 5px solid magenta;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1{
+    text-align: center;
+}
+
+.col1of2 {
+    height: 35%;
+    width: 400px;
+    margin: 25px;
+    text-align: left;
+    border-radius: 10px;
+    background:#3399FF;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    background: #333333;
+}
