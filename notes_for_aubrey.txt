@@ -1,0 +1,8 @@
+//notes for Aubrey
+//the below commands go into cmd every time you want to make a new directory where you need
+//to use node
+
+npm init
+npm i express
+npm i joi
+

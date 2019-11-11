@@ -1,0 +1,14 @@
+body{
+    background: lightgreen;
+}
+
+#songs{
+    width: 60%;
+    margin: auto;
+    border: 5px solid red;
+}
+
+.song{
+    padding: 30px;
+    border-radius: 10px;
+}

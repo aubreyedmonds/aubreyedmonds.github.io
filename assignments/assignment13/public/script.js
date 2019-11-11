@@ -5,10 +5,16 @@ async function showDrivers(){
     console.log(nascarJson);
 
     let contentDiv = document.getElementById("content");
+    let cars;
 
     for(i in nascarJson){
-        console.log(nascarJson[i][0]);
-        contentDiv.append(makeDriverElem(nascarJson[i][0]));
+        cars = nascarJson[i];
+    }
+
+    for(i in cars){
+        console.log(cars[i]);
+        contentDiv.append(makeDriverElem(cars[i]));
+
     }
 }
 
@@ -21,6 +27,8 @@ function makeDriverElem(driver){
     driverP = document.createElement("p");
     driverP.innerHTML = `has ${driver.number} as their number, ${driver.wins} wins, ${driver.polls} polls, ${driver.top_tens} Top Tens, ${driver.championships} Championships, ${driver.career_starts} Career Starts, and is from ${driver.hometown}`;
     driverElem.append(driverP); 
+    // driverPp = document.createElement("img");
+    // driverPp.innerHTML = ``
     return driverElem;
 }
 
