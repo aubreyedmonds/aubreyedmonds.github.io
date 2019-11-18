@@ -1,14 +1,23 @@
-body{
-    background: lightgreen;
+body {
+    background:lightgreen;
 }
 
-#songs{
-    width: 60%;
-    margin: auto;
-    border: 5px solid red;
+#songs {
+    width:80%;
+    margin:auto;
 }
 
-.song{
-    padding: 30px;
-    border-radius: 10px;
+.song {
+    padding:10px;
+    margin:10px;
+    background:lightpink;
+    border:3px solid white;
+}
+
+.song-form {
+    width:40%;
+    background:skyblue;
+    border:3px solid white;
+    padding:10px;
+    margin:10px auto;
 }
