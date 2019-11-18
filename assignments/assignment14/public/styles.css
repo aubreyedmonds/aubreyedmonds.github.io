@@ -1,5 +1,5 @@
 body {
-    background:lightskyblue;
+    background:brown;
 }
 
 #pies {
@@ -10,13 +10,13 @@ body {
 .pie {
     padding:10px;
     margin:10px;
-    background:lightpink;
+    background:orange;
     border:3px solid white;
 }
 
 .pie-form {
     width:40%;
-    background:skyblue;
+    background:yellow;
     border:3px solid white;
     padding:10px;
     margin:10px auto;
