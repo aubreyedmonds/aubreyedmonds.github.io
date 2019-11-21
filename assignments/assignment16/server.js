@@ -34,15 +34,24 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/api/pies', (req,res)=>{
+
+//give me a song object and i will make sure that the name singer and genre match the scheme and i will return true or false
+function validatePie(pie){
     const schema = {
         crust:Joi.string().min(3).required(),
         flavor:Joi.string().min(4).required(),
-        topping:Joi.string().required(),
-        filling:Joi.string().required()
+        filling:Joi.string().min(3).required(),
+        topping:Joi.string().min(3).required(),
     }
 
-    const result = Joi.validate(req.body, schema);
+    return Joi.validate(pie, schema);
+}
+
+//adding a pie
+//we validate what comes in through the body to make sure it matches the schema
+//push to pie array
+app.post('/api/pies', (req,res)=>{
+    const result = validatePie(req.body);
 
     if(result.error){
         res.status(400).send(result.error.details[0].message);
@@ -52,13 +61,64 @@ app.post('/api/pies', (req,res)=>{
         id:pies.length + 1,
         crust : req.body.crust,
         flavor : req.body.flavor,
-        topping : req.body.topping,
-        filling: req.body.filling
+        filling : req.body.filling,
+        topping : req.body.topping
     }
-    console.log("Pie crust is: " + req.body.crust);
+    console.log("name is: " + req.body.crust);
     pies.push(pie);
     res.send(pie);
 });
+
+//update a pie
+//we say pass me the id of the pie and then we will update based on the body
+//if statement
+app.put('/api/pies/:id', (req,res)=>{
+    const requestedId = parseInt(req.params.id);
+    const pie = pies.find(s =>s.id === requestedId);
+
+    //no pie with matchin id in array
+    if(!pie) {
+        res.status(404).send(`The pie with id ${requestedId} was not found`);
+        return;
+    }
+
+    //validating song with schema
+    const result = validatePie(req.body);
+
+    if(result.error){
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    //update
+    pie.crust = req.body.crust;
+    pie.flavor = req.body.flavor;
+    pie.filling = req.body.filling;
+    pie.topping = req.body.topping;
+    res.send(pie);
+
+});
+
+//pass me an id through the url 
+//find the song in the song array
+//if statement
+//find the song, remove from the array and send back
+app.delete('/api/pies/:id',(req,res)=>{
+    const requestedId = parseInt(req.params.id);
+    const pie = pies.find(s =>s.id === requestedId);
+
+    //no song with matchin id in array
+    if(!pie) {
+        res.status(404).send(`The pie with id ${requestedId} was not found`);
+        return;
+    }
+
+    //song exists so I can go forward and delete it
+    let index = pies.indexOf(pie);
+    pies.splice(index,1);
+    res.send(pie);
+});
+
 
 //listen
 const port = process.env.PORT || 3000;

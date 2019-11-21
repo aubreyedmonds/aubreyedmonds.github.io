@@ -9,7 +9,6 @@ async function showSongs(){
     }
 }
 
-//shows an individual song
 async function showSong(){
     let id = document.getElementById("txt-song-id").value;
     let response = await fetch(`api/songs/${id}`);
@@ -18,7 +17,6 @@ async function showSong(){
     let songDiv = document.getElementById("song");
     songDiv.append(getSongElem(song));
 }
-
 
 function getSongElem(song){
     let songDiv = document.createElement("div");
@@ -49,7 +47,6 @@ function getSongElem(song){
     return songDiv;
 }
 
-//show the edit song form and populate it by doing get request from server
 async function showEditSong(){
     const id = this.getAttribute("data-id");
     document.getElementById("edit-song-id").innerHTML = id;
@@ -63,7 +60,6 @@ async function showEditSong(){
     return false;
 }
 
-//passed the id to the server and call delete
 async function deleteSong(){
     const id = this.getAttribute("data-id");
     
@@ -83,7 +79,6 @@ async function deleteSong(){
     return false;
 }
 
-//get id and call server
 async function addSong(){
     //get the song inforamtion
     const songName = document.getElementById("txt-new-song-name").value;

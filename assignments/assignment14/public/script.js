@@ -34,7 +34,7 @@ function getPieElem(pie){
 }
 
 async function addPie(){
-    //get the song inforamtion
+    //get the song information
     const pieCrust = document.getElementById("txt-new-pie-crust").value;
     const pieFlavor = document.getElementById("txt-new-pie-flavor").value;
     const pieFilling = document.getElementById("txt-new-pie-filling").value;
