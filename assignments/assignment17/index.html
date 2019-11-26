@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="public/styles.css">
+        <link rel="stylesheet" href="/public/styles.css">
         <link rel="shortcut icon" href="">
         <script src="script.js"></script>
     </head>
@@ -9,12 +9,15 @@
         <div class="container"> <!--creating the container -->
             <div class="add-pie">
                 <h1>Add a Pie!</h1>
+                <p>Holiday Association: <input id="holiday-input"></p>
                 <p>Crust: <input id="crust-input"></p>
                 <p>Flavor: <input id="flavor-input"></p>
                 <p>Filling: <input id="filling-input"></p>
                 <p>Topping: <input id="topping-input"></p>
+                <p>Slices: <input id="slices-input"></p>
                 <button id="add-pie-btn">Add Pie :)</button>
                 <p><span id="pie-button-result"></span></p>
+                <p id="feedback" class="hidden"></p>
             </div>
         </div>
     </body>
