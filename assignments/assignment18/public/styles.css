@@ -1,39 +1,48 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-    background: lightgoldenrodyellow;
+    background:brown;
 }
 
-h1 {
+#page-header{
     text-align: center;
 }
 
-.container{
+#add-div{
+    text-align: center;
+}
+
+#add-form-div{
+    text-align: center;
+}
+
+/* not convinced this did anything */
+#pies-div{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    background: lightpink;
-    width: 95%;
-    /* align-items: center; */
-    margin:auto;
-    padding: 25px;
 }
 
-button{
-    background-color: lightblue;
-    border: 2px solid purple;
-    height: 40px;
-    width: 35px;
-    color: black;
-    padding: 10px 10px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
+#pies {
+    width:80%;
+    margin:auto;
 }
-/* 
-.box1, .box2{
-    background: #2778C7;
-    padding: 5px;
-    margin: 20px;
-} */
+
+.pie {
+    padding:10px;
+    margin:10px;
+    background:orange;
+    border:3px solid white;
+}
+
+#pie-form {
+    width:40%;
+    background:yellow;
+    border:3px solid white;
+    padding:10px;
+    margin:10px auto;
+}
+
+.hidden{
+    display: none;
+    /* visibility: hidden; */
+}

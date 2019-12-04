@@ -5,10 +5,12 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const pies = [
-    {id:1, name:"Jingle Bells", singer:"Michael Buble", genre:"jazz" },
-    {id:2, name:"All I want for Christmas is you", singer:"Miara Carrie", genre:"pop"},
-    {id:3, name:"Rodulf the Red Nose Reinder", singer:"DMX", genre:"rap"},
-    {id:4, name:"White Christmas", singer:"Elvis Prezley", genre:"rock"}
+    {id:1, crust: "graham cracker", flavor: "key lime", topping: "whip cream", filling: "cream"},
+    {id:2, crust: "flour", flavor: "chocolate", topping: "pecans", filling: "pudding"},
+    {id:3, crust: "oreo cookie", flavor: "vanilla", topping: "cherries", filling: "custard"},
+    {id:4, crust: "butter", flavor: "blueberry", topping: "sugar", filling: "fruit",},
+    {id:5, crust: "puff pastry", flavor: "bacon and egg", topping: "chives", filling: "quiche",},
+    {id:6, crust: "filo pastry", flavor: "salt and pepper", topping: "meat", filling: "savory",},
 ]
 
 app.get('/api/pies', (req,res)=>{
@@ -20,7 +22,7 @@ app.get('/api/pies/:id', (req,res)=>{
     const pie = pies.find(s =>s.id === requestedId);
 
     if(!pie) {
-        res.status(404).send(`The pie with id ${requestedId} was not found`);
+        res.status(404).send(`The song with id ${requestedId} was not found`);
         return;
     }
 
@@ -32,16 +34,22 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/index.html');
 });
 
+
+//give me a song object and i will make sure that the name singer and genre match the scheme and i will return true or false
 function validatePie(pie){
     const schema = {
-        name:Joi.string().min(3).required(),
-        singer:Joi.string().min(4).required(),
-        genre:Joi.string().required()
+        crust:Joi.string().min(3).required(),
+        flavor:Joi.string().min(4).required(),
+        filling:Joi.string().min(3).required(),
+        topping:Joi.string().min(3).required(),
     }
 
     return Joi.validate(pie, schema);
 }
 
+//adding a pie
+//we validate what comes in through the body to make sure it matches the schema
+//push to pie array
 app.post('/api/pies', (req,res)=>{
     const result = validatePie(req.body);
 
@@ -51,16 +59,19 @@ app.post('/api/pies', (req,res)=>{
 
     const pie = {
         id:pies.length + 1,
-        name : req.body.name,
-        singer : req.body.singer,
-        genre : req.body.genre
+        crust : req.body.crust,
+        flavor : req.body.flavor,
+        filling : req.body.filling,
+        topping : req.body.topping
     }
-    console.log("name is: " + req.body.name);
+    console.log("name is: " + req.body.crust);
     pies.push(pie);
     res.send(pie);
 });
 
 //update a pie
+//we say pass me the id of the pie and then we will update based on the body
+//if statement
 app.put('/api/pies/:id', (req,res)=>{
     const requestedId = parseInt(req.params.id);
     const pie = pies.find(s =>s.id === requestedId);
@@ -71,7 +82,7 @@ app.put('/api/pies/:id', (req,res)=>{
         return;
     }
 
-    //validating pie with schema
+    //validating song with schema
     const result = validatePie(req.body);
 
     if(result.error){
@@ -80,24 +91,29 @@ app.put('/api/pies/:id', (req,res)=>{
     }
 
     //update
-    pie.name = req.body.name;
-    pie.singer = req.body.singer;
-    pie.genre = req.body.genre;
+    pie.crust = req.body.crust;
+    pie.flavor = req.body.flavor;
+    pie.filling = req.body.filling;
+    pie.topping = req.body.topping;
     res.send(pie);
 
 });
 
+//pass me an id through the url 
+//find the song in the song array
+//if statement
+//find the song, remove from the array and send back
 app.delete('/api/pies/:id',(req,res)=>{
     const requestedId = parseInt(req.params.id);
     const pie = pies.find(s =>s.id === requestedId);
 
-    //no pie with matchin id in array
+    //no song with matchin id in array
     if(!pie) {
         res.status(404).send(`The pie with id ${requestedId} was not found`);
         return;
     }
 
-    //pie exists so I can go forward and delete it
+    //song exists so I can go forward and delete it
     let index = pies.indexOf(pie);
     pies.splice(index,1);
     res.send(pie);

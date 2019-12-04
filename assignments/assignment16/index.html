@@ -4,10 +4,37 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="">
         <script src="script.js"></script>
-
     </head>
     <body>
-        <h1>Pies :))))</h1>
+            <h1 id="page-header">Let's Bake a Pie~!</h1>
+            <div id="add-div">
+                <button id="add-pie-btn">+</button>
+            </div>
+            <div id="add-form-div">
+                <div id="add-pie-form" class="hidden">
+                    <h3>Bake a Pie!</h3>
+                    <p>
+                        <label for="txt-new-pie-crust">Crust:</label>
+                        <input id="txt-new-pie-crust">
+                    </p>
+                    <p>
+                        <label for="txt-new-pie-flavor">Flavor:</label>
+                        <input id="txt-new-pie-flavor">
+                    </p>
+                    <p>
+                        <label for="txt-new-pie-filling">Filling:</label>
+                        <input id="txt-new-pie-filling">
+                    </p>
+                    <p>
+                        <label for="new-pie-topping">Topping:</label>
+                        <input id="txt-new-pie-topping">
+                    </p>
+                    <button id="btn-add-pie">Add Pie</button>
+                    <p id="feedback" class="hidden"></p>
+                </div>
+            </div>
+            <!--  -->
+        <h1>List of Pies</h1>
         <div id="pies"></div>
 <!-- Show -->
         <div class="pie-form">
@@ -18,27 +45,6 @@
             </p>
             <button id="btn-show-pie">Show Pie</button>
             <div id="pie"></div>
-        </div>
-<!-- Add -->
-        <div class="pie-form">
-            <h3>Bake a Pie</h3>
-            <p>
-                <label for="txt-new-pie-crust">Crust:</label>
-                <input id="txt-new-pie-crust">
-            </p>
-            <p>
-                <label for="txt-new-pie-flavor">Flavor:</label>
-                <input id="txt-new-pie-flavor">
-            </p>
-            <p>
-                <label for="txt-new-pie-filling">Filling:</label>
-                <input id="txt-new-pie-filling">
-            </p>
-            <p>
-                <label for="new-pie-topping">Topping:</label>
-                <input id="txt-new-pie-topping">
-            </p>
-            <button id="btn-add-pie">Add Pie</button>
         </div>
 <!--Edit-->
         <div id="edit-pie-form" class="pie-form">

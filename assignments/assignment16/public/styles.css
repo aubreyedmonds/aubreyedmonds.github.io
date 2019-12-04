@@ -1,23 +1,43 @@
 body {
-    background:brown;
+  background:lightblue;
+}
+
+h1{
+  text-align: center;
+}
+
+.hidden{
+  display: none;
 }
 
 #pies {
-    width:80%;
-    margin:auto;
+  width:80%;
+  margin:auto;
+}
+
+#page-header{
+  text-align: center;
+}
+
+#add-div{
+  text-align: center;
+}
+
+#add-form-div{
+  text-align: center;
 }
 
 .pie {
-    padding:10px;
-    margin:10px;
-    background:orange;
-    border:3px solid white;
+  padding:10px;
+  margin:10px;
+  background:lightcoral;
+  border:3px solid white;
 }
 
 .pie-form {
-    width:40%;
-    background:yellow;
-    border:3px solid white;
-    padding:10px;
-    margin:10px auto;
+  width:40%;
+  background:yellow;
+  border:3px solid white;
+  padding:10px;
+  margin:10px auto;
 }
