@@ -6,3 +6,4 @@ npm init
 npm i express
 npm i joi
 
+npm i mongoose

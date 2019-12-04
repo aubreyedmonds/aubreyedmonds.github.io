@@ -1,0 +1,23 @@
+body {
+    background:lightgreen;
+}
+
+#pies {
+    width:80%;
+    margin:auto;
+}
+
+.pie {
+    padding:10px;
+    margin:10px;
+    background:lightpink;
+    border:3px solid white;
+}
+
+.pie-form {
+    width:40%;
+    background:skyblue;
+    border:3px solid white;
+    padding:10px;
+    margin
+}

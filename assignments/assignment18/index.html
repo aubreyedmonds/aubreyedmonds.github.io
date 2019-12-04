@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Pies :)</h1>
+        <div id="pies"></div>
+        <div class="pie-form">
+            <h3>Show A Pie:</h3>
+            <p>
+                <label for="pie-id">Pie Id:</label>
+                <input id="txt-pie-id">
+            </p>
+            <button id="btn-show-pie">Show Pie</button>
+            <div id="pie"></div>
+        </div>
+
+        <!-- Add a Pie-->
+        <div class="pie-form">
+            <h3>Create a Pie</h3>
+            <p>
+                <label for="txt-new-pie-name">Pie Name:</label>
+                <input id="txt-new-pie-name">
+            </p>
+            <p>
+                <label for="txt-new-pie-singer">Singer:</label>
+                <input id="txt-new-pie-singer">
+            </p>
+            <p>
+                <label for="txt-new-pie-genre">Genre:</label>
+                <input id="txt-new-pie-genre">
+            </p>
+            <button id="btn-add-pie">Add Pie</button>
+        </div>
+
+        <!--Edit a Pie-->
+        <div id="edit-pie-form" class="pie-form">
+            <h3>Edit a Pie</h3>
+            <p>
+                Pie Id:<span id="edit-pie-id"></span>
+            </p>
+            <p>
+                <label for="txt-new-pie-name">Pie Name:</label>
+                <input id="txt-edit-pie-name">
+            </p>
+            <p>
+                <label for="new-pie-singer">Singer:</label>
+                <input id="txt-edit-pie-singer">
+            </p>
+            <p>
+                <label for="txt-new-pie-genre">Genre:</label>
+                <input id="txt-edit-pie-genre">
+            </p>
+            <button id="btn-edit-pie">Edit Pie</button>
+        </div>
+    </body>
+</html>

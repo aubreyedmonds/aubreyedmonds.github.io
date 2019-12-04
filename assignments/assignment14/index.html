@@ -9,7 +9,7 @@
     <body>
         <h1>Pies :))))</h1>
         <div id="pies"></div>
-
+<!-- Show -->
         <div class="pie-form">
             <h3>Show A Pie:</h3>
             <p>
@@ -19,15 +19,11 @@
             <button id="btn-show-pie">Show Pie</button>
             <div id="pie"></div>
         </div>
-
+<!-- Add -->
         <div class="pie-form">
             <h3>Bake a Pie</h3>
             <p>
-                <label for="txt-new-pie-name">Pie Crust:</label>
-                <input id="txt-new-pie-name">
-            </p>
-            <p>
-                <label for="new-pie-crust">Crust:</label>
+                <label for="txt-new-pie-crust">Crust:</label>
                 <input id="txt-new-pie-crust">
             </p>
             <p>
@@ -38,7 +34,35 @@
                 <label for="txt-new-pie-filling">Filling:</label>
                 <input id="txt-new-pie-filling">
             </p>
+            <p>
+                <label for="txt-new-pie-topping">Topping:</label>
+                <input id="txt-new-pie-topping">
+            </p>
             <button id="btn-add-pie">Add Pie</button>
+        </div>
+<!--Edit-->
+        <div id="edit-pie-form" class="pie-form">
+            <h3>Edit a Pie</h3>
+            <p>
+                Pie Id:<span id="edit-pie-id"></span>
+            </p>
+            <p>
+                <label for="txt-new-pie-crust">Crust:</label>
+                <input id="txt-edit-pie-crust">
+            </p>
+            <p>
+                <label for="txt-new-pie-flavor">Flavor:</label>
+                <input id="txt-edit-pie-flavor">
+            </p>
+            <p>
+                <label for="txt-new-pie-filling">Filling:</label>
+                <input id="txt-edit-pie-filling">
+            </p>
+            <p>
+                <label for="txt-new-pie-topping">Topping:</label>
+                <input id="txt-edit-pie-topping">
+            </p>
+            <button id="btn-edit-pie">Edit Pie</button>
         </div>
     </body>
 </html>

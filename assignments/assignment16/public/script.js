@@ -81,7 +81,7 @@ async function deletePie(){
 }
 
 async function addPie(){
-    //get the song inforamtion
+    //get the song information
     const pieCrust = document.getElementById("txt-new-pie-crust").value;
     const pieFlavor = document.getElementById("txt-new-pie-flavor").value;
     const pieFilling = document.getElementById("txt-new-pie-filling").value;
@@ -89,7 +89,7 @@ async function addPie(){
 
     console.log(`you are adding ${pieCrust}, ${pieFilling}, ${pieFlavor}, ${pieTopping}`);
 
-    let pie = {"crust": pieCrust, "flavor":pieFlavor, "filling":pieFilling, "topping":pieTopping};
+    let pie = {"crust": pieCrust, "flavor": pieFlavor, "filling": pieFilling, "topping": pieTopping};
 
     let response = await fetch('/api/pies/', {
         method: 'POST',
@@ -99,7 +99,7 @@ async function addPie(){
         body: JSON.stringify(pie),
     });
 
-    if(response != 200){
+    if(response.status != 200){
         console.log("Oh no shnuckums! Error baking a pie!");
         return;
     }
