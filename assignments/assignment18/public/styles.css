@@ -1,48 +1,43 @@
 body {
-    background:brown;
-}
-
-#page-header{
+    background:lightblue;
+  }
+  
+  h1{
     text-align: center;
-}
-
-#add-div{
-    text-align: center;
-}
-
-#add-form-div{
-    text-align: center;
-}
-
-/* not convinced this did anything */
-#pies-div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#pies {
+  }
+  
+  .hidden{
+    display: none;
+  }
+  
+  #pies {
     width:80%;
     margin:auto;
-}
-
-.pie {
+  }
+  
+  #page-header{
+    text-align: center;
+  }
+  
+  #add-div{
+    text-align: center;
+  }
+  
+  #add-form-div{
+    text-align: center;
+  }
+  
+  .pie {
     padding:10px;
     margin:10px;
-    background:orange;
+    background:lightcoral;
     border:3px solid white;
-}
-
-#pie-form {
+  }
+  
+  .pie-form {
     width:40%;
     background:yellow;
     border:3px solid white;
     padding:10px;
     margin:10px auto;
-}
-
-.hidden{
-    display: none;
-    /* visibility: hidden; */
-}
+  }

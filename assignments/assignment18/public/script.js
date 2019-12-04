@@ -11,9 +11,6 @@ async function showPies(){
     let piesDiv = document.getElementById("pies");
     piesDiv.innerHTML = "";
 
-    // for css styles
-    piesDiv.className = "pies-div";
-
     for(i in pies){
         piesDiv.append(getPieElem(pies[i]));
     }
@@ -35,7 +32,7 @@ function getPieElem(pie){
     pieTitle.innerHTML = pie.id + ": " + pie.crust;
 
     let pieP = document.createElement("p");
-    pieP.innerHTML = `has the flavor ${pie.flavor}! It is filled with ${pie.filling}, and then topped with scrumptious ${pie.topping}`;
+    pieP.innerHTML = `has the flavor ${pie.flavor}! It is filled with ${pie.filling}, and then topped with scrumptious ${pie.topping}!!`;
 
     //create edit and delete links
     let editLink = document.createElement("a");
@@ -118,31 +115,32 @@ async function addPie(){
     showPies();
 }
 
-async function editPie(){
-    // let id = document.getElementById("txt-edit-pie-id").textContent;
-    let crust = document.getElementById("txt-edit-pie-crust").value;
-    let flavor = document.getElementById("txt-edit-pie-flavor").value;
-    let filling = document.getElementById("txt-edit-pie-filling").value;
-    let topping = document.getElementById("txt-edit-pie-topping").value;
+    async function editPie(){
+        let id = document.getElementById("edit-pie-id").textContent;
+        let crust = document.getElementById("txt-edit-pie-crust").value;
+        let flavor = document.getElementById("txt-edit-pie-flavor").value;
+        let filling = document.getElementById("txt-edit-pie-filling").value;
+        let topping = document.getElementById("txt-edit-pie-topping").value;
 
-    let pie = {"Crust":crust, "flavor": flavor, "filling": filling, "topping": topping};
+        let pie = {"Crust":crust, "flavor": flavor, "filling": filling, "topping": topping};
         console.log(pie);
     
         let response = await fetch(`/api/pies/${id}`, {
-        method: 'PUT',
-        headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        },
-        body: JSON.stringify(pie),
-    });
+            method: 'PUT',
+            headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            },
+            body: JSON.stringify(pie),
+        });
 
-    if(response.status != 200){
-        console.log("Error editing pie");
+        if(response.status != 200){
+            console.log("Error editing pie");
+        }
+    
+        //update the pie list
+        let result = await response.json();
+        showPies();
     }
-    //update the pie list
-    let result = await response.json();
-    showPies();
-}
 
 window.onload = function(){
     this.showPies();

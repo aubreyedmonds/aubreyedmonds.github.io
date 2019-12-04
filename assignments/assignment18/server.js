@@ -22,7 +22,7 @@ app.get('/api/pies/:id', (req,res)=>{
     const pie = pies.find(s =>s.id === requestedId);
 
     if(!pie) {
-        res.status(404).send(`The song with id ${requestedId} was not found`);
+        res.status(404).send(`The pie with id ${requestedId} was not found`);
         return;
     }
 
@@ -35,7 +35,7 @@ app.get('/',(req,res)=>{
 });
 
 
-//give me a song object and i will make sure that the name singer and genre match the scheme and i will return true or false
+//give me a pie object and i will make sure that it matches the scheme and i will return true or false
 function validatePie(pie){
     const schema = {
         crust:Joi.string().min(3).required(),
@@ -82,7 +82,7 @@ app.put('/api/pies/:id', (req,res)=>{
         return;
     }
 
-    //validating song with schema
+    //validating pie with schema
     const result = validatePie(req.body);
 
     if(result.error){
@@ -100,20 +100,20 @@ app.put('/api/pies/:id', (req,res)=>{
 });
 
 //pass me an id through the url 
-//find the song in the song array
+//find the pie in the pie array
 //if statement
-//find the song, remove from the array and send back
+//find the pie, remove from the array and send back
 app.delete('/api/pies/:id',(req,res)=>{
     const requestedId = parseInt(req.params.id);
     const pie = pies.find(s =>s.id === requestedId);
 
-    //no song with matchin id in array
+    //no pie with matchin id in array
     if(!pie) {
         res.status(404).send(`The pie with id ${requestedId} was not found`);
         return;
     }
 
-    //song exists so I can go forward and delete it
+    //pie exists so I can go forward and delete it
     let index = pies.indexOf(pie);
     pies.splice(index,1);
     res.send(pie);
